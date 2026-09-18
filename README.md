@@ -18,31 +18,32 @@ Lets take a look inside the `src` folder
 
 - `utils` -> contains helper methods, error classes etc.
 
-`config for db` -> create a json file inside `src/config` called `config.json`
-Inside the config.json
-```
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
 
+### Setup the project
+
+- Download this template from github and open it in your favourite text editor.
+- Go inside the folder path and execute the following command:
+```
+npm install
+```
+- In the root directory create a `.env` file and add the following env variables
+```
+PORT =<port number of your choice>
+```
+
+- go inside the `src` folder and execute the following commands:
+```
+npx sequelize init
+```
+
+
+- By executing the above command you will get migrations and seeders folder along with a config.json inside the cnofig folder.
+
+- if you are setting up your development enviroment, then write the username of your: db, password of your db and in dialect mention whatever db you are using for example: mysql, mariadb
+
+- if you're setting up test or prod enviroment, make sure you also replace the host with the hosted db url
+
+- To run the server execute
+```
+ npm run dev
 ```
